@@ -2,15 +2,15 @@ import React from 'react'
 import Todo from "./Todo"
 import propTypes from "prop-types";
 
-export default function TodoList({ list }) {
-    // const { list } = props;
+export default function TodoList(props) {
+    const { list } = props;
     // console.log(list.map((todo) => todo))
     return (
-        <div>
+        <div className="todo-list-board">
             {list.map((todo) => {
                 return (
                     <div key={todo.id}>
-                        <Todo todo={todo} />
+                        <Todo todo={todo} toggle={props.handleToggle} />
                     </div>
                 )
             }
@@ -29,5 +29,8 @@ TodoList.defaultProps = {
 }
 
 Todo.propTypes = {
-    list: propTypes.object
+    list: propTypes.object,
+    handleToggle: propTypes.func,
+    deleteAllTodo: propTypes.func,
+    deleteTodo: propTypes.func
 }

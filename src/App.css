@@ -53,4 +53,18 @@ button {
 .todo {
   border-bottom: 1px solid rgba(34, 33, 33, 0.418);
   padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.todo:hover {
+  background-color: darkgray;
+}
+
+.complete {
+  background-color: cadetblue;
+}
+
+.todo-list-board {
+  text-align: left;
 }
