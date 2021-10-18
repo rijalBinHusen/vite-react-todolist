@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react'
-// import Button from "./components/elements/Button";
+import Button from "./components/elements/Button";
 import Header from "./components/parts/Header";
 import TodoList from "./components/parts/TodoList"
 
@@ -38,7 +38,9 @@ function App() {
     <div className="App">
       <div className="container">
         <Header />
-        {/* <Button /> */}
+        <span style={{ display: 'flex', marginBottom: 15 }}>
+          <Button onClick={deleteAllTodo} isDanger style={{ marginLeft: 'auto' }} value="Delete all completed" />
+        </span>
         <TodoList list={todo} handleToggle={handleToggle} deleteAllTodo={deleteAllTodo} deleteTodo={deleteTodo} />
       </div>
     </div>

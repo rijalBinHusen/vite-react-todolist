@@ -7,26 +7,31 @@ export default function TodoList(props) {
     // console.log(list.map((todo) => todo))
     return (
         <div className="todo-list-board">
-            {list.map((todo) => {
+            {list.length > 0 && list.map((todo) => {
                 return (
                     <div key={todo.id}>
                         <Todo todo={todo} delete={props.deleteTodo} toggle={props.handleToggle} />
                     </div>
                 )
+            })
             }
-            )}
+            {list.length < 1 && <div>
+                <Todo todo={{
+                    id: false,
+                    task: "Nothing todo",
+                    complete: false
+                }} />
+            </div>}
         </div>
     )
 }
 
 
-TodoList.defaultProps = {
-    list: [{
-        id: "kosong",
-        task: "nothing todo",
-        complete: false
-    }]
-}
+TodoList.defaultProps = [{
+    id: "kosong",
+    task: "nothing todo",
+    complete: false
+}]
 
 Todo.propTypes = {
     list: propTypes.object,

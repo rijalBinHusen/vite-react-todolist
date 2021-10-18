@@ -18,14 +18,14 @@ export default function Todo(props) {
 
     return (
         <div
-            className={todo.complete ? "todo" : "todo complete"}
+            className={todo.complete ? "todo complete" : "todo"}
         >
             {todo.task}
-            <span style={{ marginLeft: "auto" }}>
+            {todo.id && <span style={{ marginLeft: "auto" }}>
 
                 <Button
                     isWarning
-                    value={todo.complete ? "Complete" : "Incomplete"}
+                    value={todo.complete ? "Completed" : "Incompleted"}
                     onClick={handleClick}
                     id={todo.id}
                 />
@@ -36,7 +36,7 @@ export default function Todo(props) {
                     onClick={handleClick}
                     id={todo.id}
                 />
-            </span>
+            </span>}
         </div>
     )
 }

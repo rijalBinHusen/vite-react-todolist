@@ -10,7 +10,7 @@ export default function Button(props) {
     if (props.isWarning) className.push("warning")
 
     return (
-        <button id={props.id} onClick={props.onClick} className={["button-18", className].join(" ")} role="button">{value}</button>
+        <button id={props.id} style={props.style} onClick={props.onClick} className={["button-18", className].join(" ")} role="button">{value}</button>
     )
 
 }
