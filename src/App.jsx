@@ -29,7 +29,7 @@ function App() {
   // delete particular todo
   function deleteTodo(id) {
     let filter = todo.filter((task) => {
-      return task.id !== id
+      return task.id !== +id
     })
     setTodo(filter)
   }

@@ -10,7 +10,7 @@ export default function TodoList(props) {
             {list.map((todo) => {
                 return (
                     <div key={todo.id}>
-                        <Todo todo={todo} toggle={props.handleToggle} />
+                        <Todo todo={todo} delete={props.deleteTodo} toggle={props.handleToggle} />
                     </div>
                 )
             }

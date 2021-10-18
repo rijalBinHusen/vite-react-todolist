@@ -25,7 +25,8 @@
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
-  color: #ffffff
+  color: #ffffff;
+  margin-right: 3px;
 }
 
 .button-18:disabled { 
